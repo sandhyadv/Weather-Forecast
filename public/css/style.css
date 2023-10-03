@@ -333,14 +333,18 @@ navbar-toggler {
     margin-top: 3rem;
   }
   .temp_form {
-    width: 60%;
+    width: auto;
     position: relative;
     margin: 10rem auto;
   }
   .tempInformation {
     width: auto;
   }
-
+  .fa-chevron-circle-down:before,
+  .fa-circle-chevron-down:before {
+    content: "\f13a";
+    margin-right: -30rem;
+  }
   .main_layer .middle_layer p,
   .main_layer .middle_layer .fa {
     font-size: 5rem;

@@ -14,9 +14,11 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 app.get("/about", (req, res) => {
   res.render("about");
 });
+
 app.get("/weather", (req, res) => {
   res.render("weather");
 });
@@ -24,13 +26,13 @@ app.get("/weather", (req, res) => {
 app.get("about/*", (req, res) => {
   res.render("Error");
 });
-app.get("weather", (req, res) => {
+app.get("weather/*", (req, res) => {
   res.render("Error");
 });
-app.get("*", (req, res) => {
+app.get("*/", (req, res) => {
   res.render("Error");
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://${port}/`);
+  console.log(`listening to the post at ${port}`);
 });
